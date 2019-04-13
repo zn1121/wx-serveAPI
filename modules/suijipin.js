@@ -2,7 +2,7 @@ var express = require('express');
 const db = require('../modules/db')
 
 
-exports.sujipin = function(req,res){
+exports.suijipin = function(req,res){
 
   
   db.query(`select * from bangni`,(err,result)=>{

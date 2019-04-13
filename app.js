@@ -19,7 +19,7 @@ app.get('/download',download.file_download);
 //帮你拼
 app.get('/bangnipin',bang.bangnipin);
 //随机拼
-app.get('/sujipin',suiji.sujipin);
+app.get('/suijipin',suiji.suijipin);
 
 
 app.use(logger('dev'));

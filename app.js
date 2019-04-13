@@ -7,6 +7,7 @@ var download = require('./modules/dowmload');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bang = require('./modules/bangnipin');
+var suiji = require('./modules/suijipin');
 var db = require('./modules/db');
 var app = express();
 
@@ -17,7 +18,8 @@ app.set('view engine', 'ejs');
 app.get('/download',download.file_download);
 //帮你拼
 app.get('/bangnipin',bang.bangnipin);
-
+//随机拼
+app.get('/sujipin',suiji.sujipin);
 
 
 app.use(logger('dev'));

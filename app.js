@@ -10,7 +10,7 @@ var bang = require('./modules/bangnipin');
 var suiji = require('./modules/suijipin');
 var db = require('./modules/db');
 var app = express();
-
+//加一行代码测试pm2;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

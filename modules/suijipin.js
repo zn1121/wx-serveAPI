@@ -4,8 +4,8 @@ const db = require('../modules/db')
 
 exports.suijipin = function(req,res){
 
-  //[sjp_random],
-  db.query(`select * from bangni where id = 3`,(err,result)=>{
+  
+  db.query('select * from bangni where id = ?',[sjp_random],(err,result)=>{
     if(err){
       res.send({
         status: 0,

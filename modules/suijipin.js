@@ -3,7 +3,7 @@ const db = require('../modules/db')
 
 
 exports.suijipin = function(req,res){
-
+  var id = req.query.id;//获得请求的手机号
   
   db.query('select * from bangni where id = ?',[id],(err,result)=>{
     if(err){

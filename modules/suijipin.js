@@ -1,9 +1,9 @@
 var express = require('express');
-const db = require('../modules/db')
+const db = require('../modules/db').con;
 
 
 exports.suijipin = function(req,res){
-  var id = req.query.id;//获得请求的手机号
+  var id = req.query.id;
   
   db.query('select * from bangni where id = ?',[id],(err,result)=>{
     if(err){

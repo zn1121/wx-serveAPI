@@ -1,11 +1,11 @@
 var express = require('express');
-const db = require('../modules/db')
+const db = require('../modules/db').con;
 
 
 exports.bangnipin = function(req,res){
-
+  var name = req.query.name;
   
-  db.query(`select * from bangni`,(err,result)=>{
+  db.query('select * from bangni where name=?',[name],(err,result)=>{
     if(err){
       res.send({
         status: 0,

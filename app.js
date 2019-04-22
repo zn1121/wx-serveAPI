@@ -20,6 +20,7 @@ app.get('/download',download.file_download);
 app.get('/bangnipin',bang.bangnipin);
 //随机拼
 app.get('/suijipin',suiji.suijipin);
+//自主拼
 
 
 app.use(logger('dev'));

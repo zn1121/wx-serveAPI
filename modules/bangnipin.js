@@ -3,9 +3,9 @@ const db = require('../modules/db').con;
 
 
 exports.bangnipin = function(req,res){
-  var name = req.query.name;
+  var food_name = req.query.food_name;
   
-  db.query('select * from bangni where name=?',[name],(err,result)=>{
+  db.query('select * from bangni where name=?',[food_name],(err,result)=>{
     if(err){
       res.send({
         status: 0,

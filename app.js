@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bang = require('./modules/bangnipin');
 var suiji = require('./modules/suijipin');
+var zizhu = require('./modules/zizhupin')
 var db = require('./modules/db');
 var app = express();
 //加一行代码测试pm2;
@@ -21,7 +22,7 @@ app.get('/bangnipin',bang.bangnipin);
 //随机拼
 app.get('/suijipin',suiji.suijipin);
 //自主拼
-
+app.get('/zizhupin',zizhu.zizhupin);
 
 app.use(logger('dev'));
 app.use(express.json());

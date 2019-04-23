@@ -13,10 +13,31 @@ exports.zizhupin = function(req,res){
         message: '数据库错误'
       })
     }else{
-        console.log(result);
-        res.send(result);
-        console.log(result[0].color);
-        //在此处加入评分系统的逻辑代码
+        if(result[0].hunsu == "h"){
+          db.query('select * from sucai',(err,result)=>{
+            if(err){
+              res.send({
+                status: 0,
+                info: 'error',
+                message: '数据库错误'
+              })
+            }else{
+              res.send(result);
+            }
+          })
+        }else{
+          db.query('select * from huncai',(err,result)=>{
+            if(err){
+              res.send({
+                status: 0,
+                info: 'error',
+                message: '数据库错误'
+              })
+            }else{
+              res.send(result);
+            }
+          })
+        }
     }
   });
   }

@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bang = require('./modules/bangnipin');
 var suiji = require('./modules/suijipin');
-var zizhu = require('./modules/zizhupin')
+var zizhu = require('./modules/zizhupin');
+var zizhu_index = require('./modules/zizhupin')
 var db = require('./modules/db');
 var app = express();
 //加一行代码测试pm2;
@@ -23,6 +24,8 @@ app.get('/bangnipin',bang.bangnipin);
 app.get('/suijipin',suiji.suijipin);
 //自主拼
 app.get('/zizhupin',zizhu.zizhupin);
+//自主拼的第二个页面
+app.get('/zizhupin_index',zizhu_index.zizhupin_index);
 
 app.use(logger('dev'));
 app.use(express.json());

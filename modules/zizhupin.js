@@ -13,7 +13,7 @@ exports.zizhupin = function(req,res){
         message: '数据库错误'
       })
     }else{
-        if(result[0].hunsu == "h"){
+        if(result[0].hunsu == "荤菜"){
           db.query('select * from sucai',(err,result)=>{
             if(err){
               res.send({

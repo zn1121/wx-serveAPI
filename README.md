@@ -28,7 +28,7 @@
 - 说明：这个接口是判断你选择的是素菜，给你返回荤菜的列表，反之同理
 
 ### 自主拼接口
-- 接口：https://zn1121.com/zizhupin_index?food_name=鱼香肉丝
+- 接口：https://zn1121.com/zizhupin_index
 - 参数：food_name
 - 请求：get
 - 成功返回值：array[]//一个数组，内容为每道菜的内容

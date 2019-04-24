@@ -18,6 +18,23 @@
 - 请求：get
 - 成功返回值：array[]//一个数组，内容为每道菜的内容
 - 查看接口数据（例）：https://zn1121.com/bangnipin?food_name=鱼香肉丝
+- 说明：在菜品总表里面查询
+
+### 帮你拼荤菜接口
+- 接口：https://zn1121.com/help_hcid
+- 参数：food_hcid
+- 请求：get
+- 成功返回值：array[]//一个数组，内容为菜的内容
+- 查看接口数据（例）：https://zn1121.com/help_hcid?food_hcid=1
+- 说明：在荤菜表里面通过查询
+
+### 帮你拼素菜接口
+- 接口：https://zn1121.com/help_scid
+- 参数：food_hcid
+- 请求：get
+- 成功返回值：array[]//一个数组，内容为菜的内容
+- 查看接口数据（例）：https://zn1121.com/help_scid?food_scid=1
+- 说明：在素菜表里面通过查询
 
 ### 自主拼接口
 - 接口：https://zn1121.com/zizhupin

@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 var bang = require('./modules/bangnipin');
 var suiji = require('./modules/suijipin');
 var zizhu = require('./modules/zizhupin');
-var zizhu_index = require('./modules/zizhupin')
 var db = require('./modules/db');
 var app = express();
 //加一行代码测试pm2;
@@ -28,8 +27,10 @@ app.get('/help_scid',bang.help_sc);
 app.get('/suijipin',suiji.suijipin);
 //自主拼
 app.get('/zizhupin',zizhu.zizhupin);
-//自主拼的第二个页面
-app.get('/zizhupin_index',zizhu_index.zizhupin_index);
+//自主拼的二级页面
+app.get('/zizhupin_index',zizhu.zizhupin_index);
+//自主拼推荐页
+app.get('/zizhupin_tuijian',zizhu.zizhupin_tuijian)
 
 app.use(logger('dev'));
 app.use(express.json());

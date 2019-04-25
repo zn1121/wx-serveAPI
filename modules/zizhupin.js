@@ -55,5 +55,18 @@ exports.zizhupin_index = function(req,res){
       res.send(result);
     }
   })
+}
 
+exports.zizhupin_tuijian = function(req,res){
+  db.query('select name from bangni',(err,result) => {
+    if(err){
+      res.send({
+        status: 0,
+        info: 'error',
+        message: '数据库错误'
+      })
+    }else{
+      res.send(result);
+    }
+  })
 }

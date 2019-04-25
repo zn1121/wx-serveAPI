@@ -2,7 +2,7 @@ const mysql = require('mysql');
 var con = mysql.createConnection({
     host:"39.96.50.201",
     user:"root",
-    password:"123456abc",
+    password:"",
     database:"platter"
 })//数据库连接配置
 

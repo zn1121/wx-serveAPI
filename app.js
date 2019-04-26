@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 //下载.doc
 app.get('/download',download.file_download);
 //帮你拼
-//app.get('/bangnipin',bang.bangnipin);
+app.get('/bangnipin',bang.bangnipin);
 //帮你拼荤菜接口
 app.get('/help_hcid',bang.help_hc);
 //帮你拼素菜接口

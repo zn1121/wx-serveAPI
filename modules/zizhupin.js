@@ -14,7 +14,7 @@ exports.zizhupin = function(req,res){
       })
     }else{
         if(result[0].hunsu == "荤菜"){
-          db.query('select * from sucai',(err,result)=>{
+          db.query('select * from sucai order by rand() limit 5',(err,result)=>{
             if(err){
               res.send({
                 status: 0,
@@ -26,7 +26,7 @@ exports.zizhupin = function(req,res){
             }
           })
         }else{
-          db.query('select * from huncai',(err,result)=>{
+          db.query('select * from huncai order by rand() limit 5',(err,result)=>{
             if(err){
               res.send({
                 status: 0,

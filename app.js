@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var bang = require('./modules/bangnipin');
 var suiji = require('./modules/suijipin');
 var zizhu = require('./modules/zizhupin');
+var wiki_cq = require('./modules/wiki')
 var db = require('./modules/db');
 var app = express();
 //加一行代码测试pm2;
@@ -30,7 +31,11 @@ app.get('/zizhupin',zizhu.zizhupin);
 //自主拼的二级页面
 app.get('/zizhupin_index',zizhu.zizhupin_index);
 //自主拼推荐页
-app.get('/zizhupin_tuijian',zizhu.zizhupin_tuijian)
+app.get('/zizhupin_tuijian',zizhu.zizhupin_tuijian);
+//食物百科为你推荐
+app.get('/wiki_name',wiki_cq.wiki_name);
+//食物百科小贴士
+app.get('/wiki_tieshi',wiki_cq.wiki_baike);
 
 app.use(logger('dev'));
 app.use(express.json());

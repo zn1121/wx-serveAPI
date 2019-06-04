@@ -25,7 +25,7 @@
 - 参数：food_hc_taste、food_hc_caixi
 - 请求：get
 - 成功返回值：array[]//一个数组，内容为菜的内容
-- 查看接口数据（例）：https://zn1121.com/help_hc?food_hc_taste="咸鲜味" and food_hc_caixi="浙菜"
+- 查看接口数据（例）：https://zn1121.com/help_hc?food_hc_taste="咸鲜味"andfood_hc_caixi="浙菜"
 - 说明：在荤菜表里面通过查询
 
 ### 帮你拼素菜接口
@@ -33,7 +33,7 @@
 - 参数：food_hcid
 - 请求：get
 - 成功返回值：array[]//一个数组，内容为菜的内容
-- 查看接口数据（例）：https://zn1121.com/help_sc?food_sc_taste="咸鲜味" and food_sc_caixi="浙菜"
+- 查看接口数据（例）：https://zn1121.com/help_sc?food_sc_taste="咸鲜味"andfood_sc_caixi="浙菜"
 - 说明：在素菜表里面通过查询
 
 ### 自主拼接口

@@ -17,8 +17,9 @@ exports.bangnipin = function(req,res){
   });
 }
 exports.help_hc = function(req,res){
-  var food_hcid = req.query.food_hcid;
-  db.query('select * from huncai where id=?',[food_hcid],(err,result)=>{
+  var food_hc_taste = req.query.food_hc_taste;
+  var food_hc_caixi = req.query.food_hc_caixi;
+  db.query('select * from huncai where taste=? and caixi=?',[food_hc_taste,food_hc_caixi],(err,result)=>{
     if(err){
       res.send({
         status: 0,
@@ -27,12 +28,14 @@ exports.help_hc = function(req,res){
       })
     }else{
       res.send(result);
+      console.log(result);
     }
   })
 }
 exports.help_sc = function(req,res){
-  var food_scid = req.query.food_scid;
-  db.query('select * from sucai where id=?',[food_scid],(err,result)=>{
+  var food_sc_taste = req.query.food_sc_taste;
+  var food_sc_caixi = req.query.food_sc_caixi;
+  db.query('select * from sucai where taste=? and caixi=?',[food_sc_taste,food_sc_caixi],(err,result)=>{
     if(err){
       res.send({
         status: 0,

@@ -36,6 +36,9 @@ app.get('/zizhupin_tuijian',zizhu.zizhupin_tuijian);
 app.get('/wiki_name',wiki_cq.wiki_name);
 //食物百科小贴士
 app.get('/wiki_tieshi',wiki_cq.wiki_baike);
+//食物百科搜索页面
+app.get('/wiki_baike',wiki_cq.baike_next);
+
 
 app.use(logger('dev'));
 app.use(express.json());

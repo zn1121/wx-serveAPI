@@ -2,7 +2,7 @@ var express = require('express');
 const db = require('../modules/db').con;
 
 exports.wiki_name = function (req, res) {
-    db.query('select name from wiki order by rand() limit 5', (err, result) => {
+    db.query('select name from baike_next order by rand() limit 5', (err, result) => {
         if (err) {
             res.send({
                 status: 0,

@@ -32,7 +32,8 @@ exports.wiki_baike = function(req,res){
 exports.baike_next = function(req,res){
     var food_search =  req.query.food_search;
     console.log("asd a",food_search);
-    db.query(`select * from baike_next where culture like '%${food_search}%'`,[food_search], (err, result) => {
+    // `select * from baike_next where culture like '%${food_search}%'`
+    db.query(`select * from baike_next where name=?`,[food_search], (err, result) => {
         if (err) {
             res.send({
                 status: 0,

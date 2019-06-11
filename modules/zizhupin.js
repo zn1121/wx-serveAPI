@@ -58,7 +58,7 @@ exports.zizhupin_index = function(req,res){
 }
 
 exports.zizhupin_tuijian = function(req,res){
-  db.query('select name from  bangni order by rand() limit 7',(err,result) => {
+  db.query('select name from  bangni order by rand() limit 8',(err,result) => {
     if(err){
       res.send({
         status: 0,
